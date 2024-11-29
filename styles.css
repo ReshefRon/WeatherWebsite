@@ -1,0 +1,137 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling for a clean background and centralized content */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #83a4d4, #b6fbff); /* Default background */
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-size: cover; /* Ensure the background image covers the screen */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition when changing background */
+}
+
+/* Main container for the weather application */
+#weather-web {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* City input container */
+.city-input {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Input focus effect */
+input[type="text"]:focus {
+    border-color: #83a4d4;
+}
+
+/* Search button styling */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #83a4d4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5b8cb4;
+}
+
+/* Weather display area styling */
+#weather-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual weather information styling */
+#temperature, #weather-description, #humidity, #wind-speed {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+#city-name {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Sunny weather styling */
+body.sunny {
+    background-image: url('images/sunny.jpg');
+    color: #fff;
+}
+
+/* Rainy weather styling */
+body.rainy {
+    background-image: url('images/rainy.jpg');
+    color: #fff;
+}
+
+/* Cloudy weather styling */
+body.cloudy {
+    background-image: url('images/cloudy.jpg');
+    color: #fff;
+}
+
+/* Snowy weather styling */
+body.snowy {
+    background-image: url('images/snowy.jpg');
+    color: #fff;
+}
+
+/* Clear sky weather styling */
+body.clear {
+    background-image: url('images/clear.jpg');
+    color: #333;
+}

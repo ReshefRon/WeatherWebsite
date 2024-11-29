@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- This declaration tells the browser to render the page in HTML5 -->
+<html lang="en">
+<head>
+    <!-- Meta charset defines the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title that appears in the browser tab -->
+    <title>Weather Website</title>
+    <!-- Link to an external CSS file for styling (optional, create a "styles.css" file if needed) -->
+    <link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+
+    <!-- Main container for the weather web content -->
+    <div id="weather-web">
+        
+        <!-- Page title, displayed as a heading -->
+        <h1>Weather Forecast</h1>
+        
+        <!-- Section for user input -->
+        <div class="city-input">
+            <!-- Label provides a text description for the input field -->
+            <label for="city">Enter City Name:</label>
+            <!-- Input field where users can type in the name of the city -->
+            <input type="text" id="city" name="city" placeholder="City name">
+            <!-- The placeholder text inside the input gives the user a hint -->
+            <button id="search-btn">Search</button>
+            
+        </div>
+
+        
+    
+        
+
+        <!-- Display area for showing weather information -->
+        <div id="weather-display">
+            <p id="city-name"></p>
+            <!-- Paragraph for showing the temperature -->
+            <!-- Initially, it displays placeholder text ("--°C") that will be updated by JavaScript -->
+            <p id="temperature">Temperature: --°C</p>
+            
+            <!-- Paragraph for showing a brief weather description (like sunny, cloudy) -->
+            <p id="weather-description">Weather: --</p>
+            
+            <!-- Paragraph for displaying the humidity percentage -->
+            <p id="humidity">Humidity: --%</p>
+            
+            <!-- Paragraph for displaying the wind speed in kilometers per hour -->
+            <p id="wind-speed">Wind Speed: -- km/h</p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
