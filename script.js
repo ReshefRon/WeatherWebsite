@@ -67,23 +67,29 @@ async function setDefaultValues() {
 
 function updateWeatherStyle(weather) {
     // Remove all weather-related background classes
-    document.body.classList.remove("clear", "sunny", "rainy", "cloudy", "snowy");
+    document.body.classList.remove("clear", "sunny", "rainy", "cloudy", "snowy","default");
 
     if (!weather) {
         return; // No style update if weather is empty
     }
 
     // Add a class based on the weather description
-    if (weather.includes("Sunny")) {
+    if (weather.toLowerCase().includes("clear")) {
+        document.body.classList.add("clear");
+    } else if (weather.toLowerCase().includes("sun")) {
         document.body.classList.add("sunny");
-    } else if (weather.includes("Rainy")) {
+    } else if (weather.toLowerCase().includes("rain")|| weather.toLowerCase().includes("drizzle")) {
         document.body.classList.add("rainy");
-    } else if (weather.includes("Cloudy")) {
+    } else if (weather.toLowerCase().includes("cloud")|| weather.toLowerCase().includes("overcast")) {
         document.body.classList.add("cloudy");
-    } else if (weather.includes("Snowy")) {
+    }  else if (weather.includes("Partly cloudy")) {
+        document.body.classList.add("cloudy");
+    } else if (weather.toLowerCase().includes("snow") || weather.toLowerCase().includes("blizzard")) {
         document.body.classList.add("snowy");
+    } else if (weather.toLowerCase().includes("fog") || weather.toLowerCase().includes("mist")) {
+        document.body.classList.add("fog"); 
     } else {
-        document.body.classList.add("clear"); // Default background
+        document.body.classList.add("default"); // Default background
     }
 }
 

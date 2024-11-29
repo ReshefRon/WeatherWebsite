@@ -135,3 +135,13 @@ body.clear {
     background-image: url('images/clear.jpg');
     color: #333;
 }
+
+/* Clear sky weather styling */
+body.fog {
+    background-image: url('images/fog.jpg');
+    color: #333;
+}
+body.default {
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    color: #333;
+}
